@@ -1,0 +1,60 @@
+---
+permalink: /404.html
+---
+<!DOCTYPE html>
+<html lang="en-US">
+
+	<head>
+		{% seo %}
+		<title>404 😭</title>
+
+		<style>
+			body {
+				background-color: #101010;
+			}
+
+			div {
+				text-align: center;
+				color: white;
+			}
+
+			h1 {
+				font-family: "SFUIDisplay", "SF UI Display", "Helvetica", sans-serif;
+				font-weight: 800;
+				font-size: 80px;
+				margin-block-end: 0;
+				margin-block-start: 30vh;
+			}
+
+			p {
+				font-family: "SFUIText", "SF UI Text", "Helvetica", sans-serif;
+				font-size: 30px;
+			}
+
+			footer {
+				position: fixed;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				padding: 5px;
+				background-color: #090909;
+			}
+
+			a {
+				color: #ccc;
+				text-decoration: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div>
+			<h1>404</h1>
+			<p>That page could not be found.</p>
+		</div>
+		<footer>
+			<a href="{% repository_url %}">View on GitHub</a>
+		</footer>
+	</body>
+
+</html>
