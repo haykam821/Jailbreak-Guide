@@ -3,12 +3,31 @@
 
 	<head>
 		{% seo %}
+
+		<style>
+			footer {
+				position: fixed;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				padding: 5px;
+				background-color: #090909;
+			}
+
+			footer > a {
+				color: #ccc;
+				text-decoration: none;
+			}
+		</style>
 	</head>
 
 	<body>
 		<div>
 			{{ content }}
 		</div>
+		<footer>
+			<a href="{{ site.github.repository_url }}">View on GitHub</a>
+		</footer>
 	</body>
 
 </html>
