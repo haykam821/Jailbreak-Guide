@@ -28,3 +28,10 @@ In addition, Cydia has multiple new features ([source](https://www.reddit.com/r/
 ## Switching from Electra
 
 If you would like to switch from Electra, you only need to sideload the unc0ver IPA and run it. **However, this will erase your tweaks and sources, so you must back them up.** To easily do that, use [Flame] and export your tweak/source list.
+
+## Common Errors
+
+Rebooting at 1/48 is unpatchable and means the kernel panicked or the exploit failed ([source](https://discordapp.com/channels/349243932447604736/500765231891611649/500795084594216970)):
+
+> **SwagMaster#2291**  
+> Reboots at 1/48 is the exploit failing/kernel panicking. This cannot be fixed by pwn. Either keep trying, or wait for certain services to host a signed and entitled version
