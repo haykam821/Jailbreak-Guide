@@ -14,7 +14,7 @@ You can find the source code of unc0ver on [GitHub](https://github.com/pwn20wnds
 
 One tester, MidnightChips, has confirmed that they had better uptime using unc0ver:
 
-![MidnightChips' experience with uptime on unc0ver](/unc0ver/resources/midnightchips_uptime.png)
+![MidnightChips' experience with uptime on unc0ver](/jailbreaks/unc0ver/resources/midnightchips_uptime.png)
 
 In addition, Cydia has multiple new features ([source](https://www.reddit.com/r/jailbreak/comments/9nwxei/release_unc0ver_the_most_advanced_jailbreak_tool/)):
 
