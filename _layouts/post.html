@@ -27,6 +27,11 @@
 				margin-block-start: 0px;
 				margin-block-end: 10px;
 			}
+
+			#top>#title>a {
+				text-decoration: none;
+				color: black;
+			}
 		</style>
 
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css" />
@@ -34,7 +39,11 @@
 
 	<body>
 		<div id="top">
-			<h1 class="bbb" id="title">{{page.title}}</h1>
+			<h1 class="bbb" id="title">
+				<a href={{permalink}}>
+					{{page.title}}
+				</a>
+			</h1>
 
 			{% for category in page.categories %}
 			<span class="category">{{category}}</span>
