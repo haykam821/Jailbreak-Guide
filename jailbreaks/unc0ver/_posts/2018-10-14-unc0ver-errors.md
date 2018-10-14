@@ -2,7 +2,7 @@
 title: "Common Errors with unc0ver"
 ---
 
-Restarts, crashes, resprings, and other issues may occur. This post documents the most common of these. For answers to other questions about unc0ver, read [the unc0ver FAQ]({% site.github.url %}/unc0ver-faq).
+Restarts, crashes, resprings, and other issues may occur. This post documents the most common of these. For answers to other questions about unc0ver, read [the unc0ver FAQ](unc0ver-faq).
 
 ## VFS Doesn't Work
 
