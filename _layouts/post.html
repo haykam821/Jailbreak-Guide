@@ -2,17 +2,17 @@
 <html lang="en-US">
 
 	<head>
-		{% seo %}
+		{% include header.html %}
 	</head>
 
 	<body>
-		<div>
+		{% for category in page.categories %}
+			<span class="category">{{category}}</span>
+		{% endfor %}
+		<div class="markdown-body">
 			<h1 id="title">{{page.title}}</h1>
 			{{ content }}
 		</div>
-		<footer>
-			<a href="{{ site.github.repository_url }}">View on GitHub</a>
-		</footer>
 	</body>
 
 </html>
