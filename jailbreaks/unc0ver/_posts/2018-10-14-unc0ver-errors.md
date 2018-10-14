@@ -6,9 +6,18 @@ Restarts, crashes, resprings, and other issues may occur. This post documents th
 
 ## VFS Doesn't Work
 
-Follow this guide, [contributed by Cryptic](https://discordapp.com/channels/349243932447604736/500765231891611649/500808505561710594):
+Follow this guide, [originally contributed by Cryptic](https://discordapp.com/channels/349243932447604736/500765231891611649/500808505561710594):
 
-![Cryptic's Method to Enable VFS](https://cdn.discordapp.com/attachments/481925396284047360/500800864454311950/image0.png)
+1. Turn off wifi and bluetooth
+2. airplane mode
+3. kill all apps
+4. clear ram
+5. open app, close app from app switcher, open it again
+6. lock device
+7. raise to wake after 10 seconds
+8. lock device for 30 seconds then unlock without raise to wake.
+9. jailbreak
+10. profit
 
 ## Rebooting at 1/48
 
