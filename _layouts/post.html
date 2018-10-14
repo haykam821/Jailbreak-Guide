@@ -3,14 +3,44 @@
 
 	<head>
 		{% include header.html %}
+		<style>
+			.category {
+				background-color: #E1ECF4;
+				border-radius: 3px;
+				padding: 0.4em 0.5em;
+				margin: 2px 2px 2px 0;
+				color: #39739d;
+				font-size: 12px;
+			}
+
+			#content {
+				padding: 25px;
+			}
+
+			#top {
+				text-align: center;
+				background-color: #bababa;
+				padding: 15px;
+			}
+
+			#top>#title {
+				margin-block-start: 0px;
+				margin-block-end: 10px;
+			}
+		</style>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css" />
 	</head>
 
 	<body>
-		{% for category in page.categories %}
+		<div id="top">
+			<h1 class="bbb" id="title">{{page.title}}</h1>
+
+			{% for category in page.categories %}
 			<span class="category">{{category}}</span>
-		{% endfor %}
-		<div class="markdown-body">
-			<h1 id="title">{{page.title}}</h1>
+			{% endfor %}
+		</div>
+		<div id="content" class="markdown-body">
 			{{ content }}
 		</div>
 	</body>
