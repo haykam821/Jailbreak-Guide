@@ -1,2 +1,5 @@
 permalink: "/:title"
 repository: haykam821/Jailbreak-Guide
+plugins:
+    - jekyll-sitemap
+    - jekyll-feed
