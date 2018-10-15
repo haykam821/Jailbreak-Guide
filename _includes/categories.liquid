@@ -1,0 +1,7 @@
+{% if include.categories.size > 0 %}
+	<div class="categories">
+		{% for category in include.categories %}
+			<span class="category">{{category}}</span>
+		{% endfor %}
+	</div>
+{% endif %}

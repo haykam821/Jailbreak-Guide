@@ -24,12 +24,12 @@
 				padding: 15px;
 			}
 
-			#top>#title {
+			.title {
 				margin-block-start: 0px;
 				margin-block-end: 10px;
 			}
 
-			#top>#title>a {
+			.title>a {
 				text-decoration: none;
 				color: black;
 			}
@@ -40,19 +40,40 @@
 
 	<body>
 		<div id="top">
-			<h1 class="bbb" id="title">
+			<h1 class="bbb title">
 				<a href={{permalink}}>
-					{{page.title}}
+					{% if page.layout == 'home' %}
+						Jailbreak Guide
+					{% else %}
+						{{ page.title }}
+					{% endif %}
 				</a>
 			</h1>
 
-			{% for category in page.categories %}
-			<span class="category">{{category}}</span>
-			{% endfor %}
+			{% include categories.liquid categories=page.categories %}
 		</div>
-		<div id="content" class="markdown-body">
-			{{ content }}
-		</div>
+		{% if show_related %}
+			<div id="content">
+				{% for post in site.posts limit:10 %}
+					<div class="page">
+						<h2 class="bbb title">
+							<a href={{post.url}}>
+								{{ post.title }}
+							</a>
+						</h2>
+
+						{% include categories.liquid categories=post.categories %}
+
+						<p>{{ post.excerpt | strip_html }}</p>
+					</div>
+					<br/>
+				{% endfor %}
+			</div>
+		{% else %}
+			<div id="content" class="markdown-body">
+				{{ content }}
+			</div>
+		{% endif %}
 	</body>
 
 </html>
