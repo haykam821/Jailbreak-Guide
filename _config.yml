@@ -3,3 +3,5 @@ repository: haykam821/Jailbreak-Guide
 plugins:
     - jekyll-sitemap
     - jekyll-feed
+webmaster_verifications:
+    google: "Z9C6W-hivjFQA3_dewvs41wFArur7sSp4ZOElj4FGy8"
