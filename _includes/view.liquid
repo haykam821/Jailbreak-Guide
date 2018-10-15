@@ -42,17 +42,13 @@
 		<div id="top">
 			<h1 class="bbb title">
 				<a href={{permalink}}>
-					{% if page.layout == 'home' %}
-						Jailbreak Guide
-					{% else %}
-						{{ page.title }}
-					{% endif %}
+					{{ include.title }}
 				</a>
 			</h1>
 
 			{% include categories.liquid categories=page.categories %}
 		</div>
-		{% if show_related %}
+		{% if include.show_related %}
 			<div id="content">
 				{% for post in site.posts limit:10 %}
 					<div class="page">
