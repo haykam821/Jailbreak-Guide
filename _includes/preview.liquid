@@ -1,0 +1,16 @@
+{% if post.sticky %}
+	<div class="page sticky">
+{% else %}
+	<div class="page">
+{% endif %}
+
+	<h2 class="bbb title">
+		<a href={{ post.url | absolute_url }}>
+			{{ post.title }}
+		</a>
+	</h2>
+
+	{% include categories.liquid categories=post.categories %}
+
+	<p class="excerpt">{{ post.excerpt | strip_html }}</p>
+</div>
