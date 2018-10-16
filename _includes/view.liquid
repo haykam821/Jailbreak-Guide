@@ -62,24 +62,19 @@
 
 			{% include categories.liquid categories=page.categories %}
 		</div>
+		
 		{% if include.show_related %}
 			<div id="content">
-				{% for post in (site.posts | sort: "sticky") limit:10 %}
+				{% for stickied in site.posts %}
 					{% if post.sticky %}
-						<div class="page sticky">
-					{% else %}
-						<div class="page">
+						{% include preview.html %}
 					{% endif %}
-						<h2 class="bbb title">
-							<a href={{ post.url | absolute_url }}>
-								{{ post.title }}
-							</a>
-						</h2>
-
-						{% include categories.liquid categories=post.categories %}
-
-						<p class="excerpt">{{ post.excerpt | strip_html }}</p>
-					</div>
+					<br/>
+				{% endfor %}
+				{% for post in site.posts limit:10 %}
+					{% unless post.sticky %}
+						{% include preview.html %}
+					{% endunless %}
 					<br/>
 				{% endfor %}
 			</div>
