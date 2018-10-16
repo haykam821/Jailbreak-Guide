@@ -65,17 +65,17 @@
 		
 		{% if include.show_related %}
 			<div id="content">
-				{% for stickied in site.posts %}
+				{% for post in site.posts %}
 					{% if post.sticky %}
 						{% include preview.liquid %}
+						<br/>
 					{% endif %}
-					<br/>
 				{% endfor %}
 				{% for post in site.posts limit:10 %}
 					{% unless post.sticky %}
 						{% include preview.liquid %}
+						<br/>
 					{% endunless %}
-					<br/>
 				{% endfor %}
 			</div>
 		{% else %}
