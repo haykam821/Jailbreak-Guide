@@ -4,7 +4,7 @@
 	<head>
 		{% include header.html %}
 		<style>
-			.post {
+			.page {
 				border-radius: 8px;
 			}
 		
@@ -63,8 +63,12 @@
 		{% if include.show_related %}
 			<div id="content">
 				{% for post in (site.posts | sort: "sticky") limit:10 %}
-					<div class="page {{ post.sticky | default: "" }}">
-						<h2 class="bbb titl)e">
+					{% if post.sticky %}
+						<div class="page sticky">
+					{% else %}
+						<div class="page">
+					{% endif %}
+						<h2 class="bbb title">
 							<a href={{ post.url | absolute_url }}>
 								{{ post.title }}
 							</a>
