@@ -13,6 +13,10 @@
 				font-size: 12px;
 				font-family: "SFUIText", "SF UI Text", sans-serif;
 			}
+			
+			.excerpt {
+				font-family: "SFUIText", "SF UI Text", sans-serif;
+			}
 
 			#content {
 				padding: 25px;
@@ -53,14 +57,14 @@
 				{% for post in site.posts limit:10 %}
 					<div class="page">
 						<h2 class="bbb title">
-							<a href={{post.url}}>
+							<a href={{post.permalink}}>
 								{{ post.title }}
 							</a>
 						</h2>
 
 						{% include categories.liquid categories=post.categories %}
 
-						<p>{{ post.excerpt | strip_html }}</p>
+						<p class="excerpt">{{ post.excerpt | strip_html }}</p>
 					</div>
 					<br/>
 				{% endfor %}
